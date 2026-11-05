@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NOYON TOP UP</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #080d18;
+  color: white;
+}
+header {
+  background: #101a2d;
+  padding: 22px 12px;
+  text-align: center;
+  border-bottom: 2px solid #00d9ff;
+}
+header h1 {
+  color: #00d9ff;
+  font-size: 30px;
+  margin: 5px;
+}
+header p {
+  color: #aaa;
+}
+.hero {
+  text-align: center;
+  padding: 35px 15px;
+  background: linear-gradient(135deg,#101b36,#102d45);
+}
+.hero h2 {
+  color: #00e5ff;
+  font-size: 26px;
+}
+.hero button {
+  background: #00c8ff;
+  color: #00111c;
+  border: none;
+  padding: 13px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+.container {
+  max-width: 650px;
+  margin: auto;
+  padding: 20px;
+}
+h2.title {
+  text-align: center;
+  color: #00d9ff;
+}
+.packages {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 12px;
+}
+.package {
+  background: #142238;
+  border: 1px solid #245477;
+  border-radius: 12px;
+  padding: 18px 8px;
+  text-align: center;
+}
+.package h3 {
+  color: #00e5ff;
+}
+.package button {
+  background: #00c8ff;
+  border: none;
+  border-radius: 6px;
+  padding: 9px 15px;
+  font-weight: bold;
+}
+form {
+  background: #142238;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 25px;
+}
+label {
+  display: block;
+  margin: 14px 0 7px;
+}
+input, select {
+  width: 100%;
+  padding: 13px;
+  border-radius: 7px;
+  border: 1px solid #34506b;
+  background: #091323;
+  color: white;
+}
+.submit {
+  width: 100%;
+  margin-top: 20px;
+  padding: 14px;
+  background: #00d9ff;
+  color: #00111c;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+}
+footer {
+  text-align: center;
+  padding: 22px;
+  color: #aaa;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>💎 NOYON TOP UP</h1>
+  <p>FREE FIRE DIAMOND STORE BD</p>
+</header>
+
+<section class="hero">
+  <h2>WELCOME TO NOYON TOP UP</h2>
+  <p>Fast & Easy Diamond Top Up</p>
+  <button onclick="document.getElementById('order').scrollIntoView()">
+    ORDER NOW
+  </button>
+</section>
+
+<div class="container">
+
+<h2 class="title">💎 DIAMOND PACKAGES</h2>
+
+<div class="packages">
+
+<div class="package">
+<h3>💎 25 Diamonds</h3>
+<p>দাম শীঘ্রই যুক্ত হবে</p>
+<button onclick="choose('25 Diamonds')">SELECT</button>
+</div>
+
+<div class="package">
+<h3>💎 50 Diamonds</h3>
+<p>দাম শীঘ্রই যুক্ত হবে</p>
+<button onclick="choose('50 Diamonds')">SELECT</button>
+</div>
+
+<div class="package">
+<h3>💎 115 Diamonds</h3>
+<p>দাম শীঘ্রই যুক্ত হবে</p>
+<button onclick="choose('115 Diamonds')">SELECT</button>
+</div>
+
+<div class="package">
+<h3>💎 240 Diamonds</h3>
+<p>দাম শীঘ্রই যুক্ত হবে</p>
+<button onclick="choose('240 Diamonds')">SELECT</button>
+</div>
+
+<div class="package">
+<h3>💎 355 Diamonds</h3>
+<p>দাম শীঘ্রই যুক্ত হবে</p>
+<button onclick="choose('355 Diamonds')">SELECT</button>
+</div>
+
+<div class="package">
+<h3>💎 610 Diamonds</h3>
+<p>দাম শীঘ্রই যুক্ত হবে</p>
+<button onclick="choose('610 Diamonds')">SELECT</button>
+</div>
+
+</div>
+
+<form id="order">
+<h2 class="title">📦 PLACE YOUR ORDER</h2>
+
+<label>Free Fire Player UID</label>
+<input type="number" placeholder="Enter Player UID" required>
+
+<label>Select Diamond Package</label>
+<select id="package" required>
+<option value="">Select Package</option>
+<option>25 Diamonds</option>
+<option>50 Diamonds</option>
+<option>115 Diamonds</option>
+<option>240 Diamonds</option>
+<option>355 Diamonds</option>
+<option>610 Diamonds</option>
+</select>
+
+<label>Payment Method</label>
+<select required>
+<option value="">Select Payment</option>
+<option>Nagad</option>
+<option>bKash (Coming Soon)</option>
+</select>
+
+<label>Customer Name</label>
+<input type="text" placeholder="Enter Your Name" required>
+
+<button class="submit" type="submit">
+SUBMIT DEMO ORDER
+</button>
+
+<p style="color:#aaa;font-size:12px;text-align:center">
+এটি পরীক্ষামূলক অর্ডার ফর্ম। এখনো কোনো পেমেন্ট নেওয়া হয় না।
+</p>
+</form>
+
+</div>
+
+<footer>
+<p>💎 NOYON TOP UP</p>
+<p>THANK YOU FOR VISITING</p>
+</footer>
+
+<script>
+function choose(name) {
+  document.getElementById("package").value = name;
+  document.getElementById("order").scrollIntoView();
+}
+
+document.getElementById("order").addEventListener("submit",function(e) {
+  e.preventDefault();
+  alert("Demo order successful! Real ordering is not active yet.");
+});
+</script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NOYON TOP UP</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #080d18;
+  color: white;
+}
+header {
+  background: #101a2d;
+  padding: 22px 12px;
+  text-align: center;
+  border-bottom: 2px solid #00d9ff;
+}
+header h1 {
+  color: #00d9ff;
+  font-size: 30px;
+  margin: 5px;
+}
+header p {
+  color: #aaa;
+}
+.hero {
+  text-align: center;
+  padding: 35px 15px;
+  background: linear-gradient(135deg,#101b36,#102d45);
+}
+.hero h2 {
+  color: #00e5ff;
+  font-size: 26px;
+}
+.hero button {
+  background: #00c8ff;
+  color: #00111c;
+  border: none;
+  padding: 13px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+.container {
+  max-width: 650px;
+  margin: auto;
+  padding: 20px;
+}
+h2.title {
+  text-align: center;
+  color: #00d9ff;
+}
+.packages {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 12px;
+}
+.package {
+  background: #142238;
+  border: 1px solid #245477;
+  border-radius: 12px;
+  padding: 18px 8px;
+  text-align: center;
+}
+.package h3 {
+  color: #00e5ff;
+}
+.package button {
+  background: #00c8ff;
+  border: none;
+  border-radius: 6px;
+  padding: 9px 15px;
+  font-weight: bold;
+}
+form {
+  background: #142238;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 25px;
+}
+label {
+  display: block;
+  margin: 14px 0 7px;
+}
+input, select {
+  width: 100%;
+  padding: 13px;
+  border-radius: 7px;
+  border: 1px solid #34506b;
+  background: #091323;
+  color: white;
+}
+.submit {
+  width: 100%;
+  margin-top: 20px;
+  padding: 14px;
+  background: #00d9ff;
+  color: #00111c;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+}
+footer {
+  text-align: center;
+  padding: 22px;
+  color: #aaa;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>💎 NOYON TOP UP</h1>
+  <p>FREE FIRE DIAMOND STORE BD</p>
+</header>
+
+<section class="hero">
+  <h2>WELCOME TO NOYON TOP UP</h2>
+  <p>Fast & Easy Diamond Top Up</p>
+  <button onclick="document.getElementById('order').scrollIntoView()">
+    ORDER NOW
+  </button>
+</section>
+
+<div class="container">
+
+<h2 class="title">💎 DIAMOND PACKAGES</h2>
+
+<div class="packages">
+
+<div class="package">
+<h3>💎 25 Diamonds</h3>
+<p>দাম শীঘ্রই যুক্ত হবে</p>
+<button onclick="choose('25 Diamonds')">SELECT</button>
+</div>
+
+<div class="package">
+<h3>💎 50 Diamonds</h3>
+<p>দাম শীঘ্রই যুক্ত হবে</p>
+<button onclick="choose('50 Diamonds')">SELECT</button>
+</div>
+
+<div class="package">
+<h3>💎 115 Diamonds</h3>
+<p>দাম শীঘ্রই যুক্ত হবে</p>
+<button onclick="choose('115 Diamonds')">SELECT</button>
+</div>
+
+<div class="package">
+<h3>💎 240 Diamonds</h3>
+<p>দাম শীঘ্রই যুক্ত হবে</p>
+<button onclick="choose('240 Diamonds')">SELECT</button>
+</div>
+
+<div class="package">
+<h3>💎 355 Diamonds</h3>
+<p>দাম শীঘ্রই যুক্ত হবে</p>
+<button onclick="choose('355 Diamonds')">SELECT</button>
+</div>
+
+<div class="package">
+<h3>💎 610 Diamonds</h3>
+<p>দাম শীঘ্রই যুক্ত হবে</p>
+<button onclick="choose('610 Diamonds')">SELECT</button>
+</div>
+
+</div>
+
+<form id="order">
+<h2 class="title">📦 PLACE YOUR ORDER</h2>
+
+<label>Free Fire Player UID</label>
+<input type="number" placeholder="Enter Player UID" required>
+
+<label>Select Diamond Package</label>
+<select id="package" required>
+<option value="">Select Package</option>
+<option>25 Diamonds</option>
+<option>50 Diamonds</option>
+<option>115 Diamonds</option>
+<option>240 Diamonds</option>
+<option>355 Diamonds</option>
+<option>610 Diamonds</option>
+</select>
+
+<label>Payment Method</label>
+<select required>
+<option value="">Select Payment</option>
+<option>Nagad</option>
+<option>bKash (Coming Soon)</option>
+</select>
+
+<label>Customer Name</label>
+<input type="text" placeholder="Enter Your Name" required>
+
+<button class="submit" type="submit">
+SUBMIT DEMO ORDER
+</button>
+
+<p style="color:#aaa;font-size:12px;text-align:center">
+এটি পরীক্ষামূলক অর্ডার ফর্ম। এখনো কোনো পেমেন্ট নেওয়া হয় না।
+</p>
+</form>
+
+</div>
+
+<footer>
+<p>💎 NOYON TOP UP</p>
+<p>THANK YOU FOR VISITING</p>
+</footer>
+
+<script>
+function choose(name) {
+  document.getElementById("package").value = name;
+  document.getElementById("order").scrollIntoView();
+}
+
+document.getElementById("order").addEventListener("submit",function(e) {
+  e.preventDefault();
+  alert("Demo order successful! Real ordering is not active yet.");
+});
+</script>
+
+</body>
+</html>
